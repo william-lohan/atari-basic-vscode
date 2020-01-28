@@ -7,8 +7,47 @@
   ],
   "patterns": [
     {
+      "name": "keyword.control.ataribasic",
+      "match": "\\b(DATA|INPUT|COLOR|LIST|ENTER|IF|FOR|NEXT|GOTO|GO TO|GOSUB|TRAP|BYE|CONT|COM|CLOSE|CLR|DEG|END|NEW|OPEN|LOAD|SAVE|STATUS|NOTE|POINT|XIO|ON|POKE|PRINT|RAD|READ|RESTORE|RETURN|RUN|STOP|POP|\\?|GET|PUT|GRAPHICS|PLOT|POSITION|DOS|DRAWTO|SETCOLOR|LOCATE|SOUND|LPRINT|CSAVE|CLOAD|ERROR-|TO|STEP|THEN)\\b"
+    },
+    {
+      "name": "storage.modifier.ataribasic",
+      "match": "\\b(LET|DIM)\\b"
+    },
+    {
+      "name": "keyword.operator.logical.ataribasic",
+      "match": "\\b(NOT|OR|AND)\\b"
+    },
+    {
+      "name": "entity.name.function.ataribasic",
+      "match": "\\b(USR|ASC|VAL|LEN|ADR|ATN|COS|PEEK|SIN|RND|FRE|EXP|LOG|CLOG|SQR|SGN|ABS|INT|PADDLE|STICK|PTRIG|STRIG)\\b"
+    },
+    {
       "name": "comment.line.ataribasic",
-      "match": "(?i:(\\bREM\\b|').*)"
+      "match": "\\bREM\\b.*"
+    },
+    {
+      "name": "variable.name.ataribasic",
+      "match": "\\b[A-Za-z](\\$|[A-Za-z0-9]*)"
+    },
+    {
+      "name": "constant.numeric.ataribasic",
+      "match": "\\b[0-9]+\\.?[0-9]*\\b"
+    },
+    {
+      "name": "keyword.operator.arithmetic.ataribasic",
+      "match": "<=|<>|>=|<|>|=|\\^|\\*|\\+|\\-|/"
+    },
+    {
+      "name": "string.quoted.double.ataribasic",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.ataribasic",
+          "match": "\\\\."
+        }
+      ]
     }
   ]
 }

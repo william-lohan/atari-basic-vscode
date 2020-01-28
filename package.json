@@ -25,6 +25,12 @@
         "scopeName": "source.AtariBASIC",
         "path": "./syntaxes/AtariBASIC.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "AtariBASIC",
+        "path": "./snippets/atari-basic.snippets.json"
+      }
     ]
   }
 }

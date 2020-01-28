@@ -1,0 +1,265 @@
+{
+  "RUN": {
+    "prefix": [
+      "RU.",
+      "RUN"
+    ],
+    "body": "RUN ${0:sexp}"
+  },
+  "CONT": {
+    "prefix": [
+      "CON.",
+      "CONT"
+    ],
+    "body": "CONT"
+  },
+  "STOP": {
+    "prefix": [
+      "STO.",
+      "STOP"
+    ],
+    "body": "STOP"
+  },
+  "LIST": {
+    "prefix": [
+      "L.",
+      "LIST"
+    ],
+    "body": "LIST ${0:sexp}"
+  },
+  "ENTER": {
+    "prefix": [
+      "E.",
+      "ENTER"
+    ],
+    "body": "ENTER ${0:sexp}"
+  },
+  "LOAD": {
+    "prefix": [
+      "LO.",
+      "LOAD"
+    ],
+    "body": "LOAD ${0:sexp}"
+  },
+  "SAVE": {
+    "prefix": [
+      "S.",
+      "SAVE"
+    ],
+    "body": "SAVE ${0:sexp}"
+  },
+  "CLOAD": {
+    "prefix": [
+      "CLOA.",
+      "CLOAD"
+    ],
+    "body": "CLOAD ${0:sexp}"
+  },
+  "CSAVE": {
+    "prefix": [
+      "CS.",
+      "CSAVE"
+    ],
+    "body": "CSAVE ${0:sexp}"
+  },
+  "LET": {
+    "prefix": [
+      "LE.",
+      "LET"
+    ],
+    "body": [
+      "LET ${1:avar} = ${2:aexp}",
+      "$0"
+    ]
+  },
+  "REM": {
+    "prefix": [
+      ".",
+      "REM"
+    ],
+    "body": [
+      "REM ${0:remark}",
+      "$0"
+    ]
+  },
+  "GOTO": {
+    "prefix": [
+      "G.",
+      "GO TO",
+      "GOTO"
+    ],
+    "body": [
+      "GOTO ${0:aexp}",
+      "$0"
+    ]
+  },
+  "FOR TO": {
+    "prefix": [
+      "F.",
+      "FOR"
+    ],
+    "body": [
+      "FOR ${1:avar} = ${2:aexp} TO ${3:aexp}",
+      "$0"
+    ]
+  },
+  "FOR TO STEP": {
+    "prefix": [
+      "F.",
+      "FOR"
+    ],
+    "body": [
+      "FOR ${1:avar} = ${2:aexp} TO ${3:aexp} STEP ${4:aexp}",
+      "$0"
+    ]
+  },
+  "NEXT": {
+    "prefix": [
+      "N.",
+      "NEXT"
+    ],
+    "body": [
+      "NEXT ${1:avar}",
+      "$0"
+    ]
+  },
+  "IF THEN": {
+    "prefix": "IF",
+    "body": [
+      "IF ${1:aexp} THEN ${2:aexp}",
+      "$0"
+    ]
+  },
+  "GOSUB": {
+    "prefix": [
+      "GOS.",
+      "GOSUB"
+    ],
+    "body": [
+      "GOSUB ${1:aexp}",
+      "$0"
+    ]
+  },
+  "RETURN": {
+    "prefix": [
+      "RET.",
+      "RETURN"
+    ],
+    "body": [
+      "RETURN",
+      "$0"
+    ]
+  },
+  "ON GOTO": {
+    "prefix": "ON",
+    "body": [
+      "ON ${1:aexp} GOTO ${2:aexp}",
+      "$0"
+    ]
+  },
+  "ON GOSUB": {
+    "prefix": "ON",
+    "body": [
+      "ON ${1:aexp} GOSUB ${2:aexp}",
+      "$0"
+    ]
+  },
+  "POP": {
+    "prefix": "POP",
+    "body": [
+      "POP",
+      "$0"
+    ]
+  },
+  "ABS": {
+    "prefix": "ABS",
+    "body": [
+      "ABS(${1:param})",
+      "$0"
+    ]
+  },
+  "CLOG": {
+    "prefix": "CLOG",
+    "body": [
+      "CLOG(${1:param})",
+      "$0"
+    ]
+  },
+  "EXP": {
+    "prefix": "EXP",
+    "body": [
+      "EXP(${1:param})",
+      "$0"
+    ]
+  },
+  "INT": {
+    "prefix": "INT",
+    "body": [
+      "INT(${1:param})",
+      "$0"
+    ]
+  },
+  "LOG": {
+    "prefix": "LOG",
+    "body": [
+      "LOG(${1:param})",
+      "$0"
+    ]
+  },
+  "RND": {
+    "prefix": "RND",
+    "body": [
+      "RND(${1:param})",
+      "$0"
+    ]
+  },
+  "SGN": {
+    "prefix": "SGN",
+    "body": [
+      "SGN(${1:param})",
+      "$0"
+    ]
+  },
+  "SQR": {
+    "prefix": "SQR",
+    "body": [
+      "SQR(${1:param})",
+      "$0"
+    ]
+  },
+  "DIM": {
+    "prefix": [
+      "DI.",
+      "COM",
+      "DIM"
+    ],
+    "body": [
+      "DIM ${1:avar}(${2:length}) = ${3:aexp}",
+      "$0"
+    ]
+  },
+  "PRINT": {
+    "prefix": [
+      "?",
+      "PRINT"
+    ],
+    "body": [
+      "PRINT ${1:printexpr}",
+      "$0"
+    ]
+  },
+  "PEEK": {
+    "prefix": "PEEK",
+    "body": [
+      "PEEK(${1:address})",
+      "$0"
+    ]
+  },
+  "POKE": {
+    "prefix": "POKE",
+    "body": [
+      "POKE ${1:address}, ${2:value}",
+      "$0"
+    ]
+  }
+}
