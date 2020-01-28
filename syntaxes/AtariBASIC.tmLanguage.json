@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "AtariBASIC",
+  "scopeName": "source.AtariBASIC",
+  "fileTypes": [
+    ".bas"
+  ],
+  "patterns": [
+    {
+      "name": "comment.line.ataribasic",
+      "match": "(?i:(\\bREM\\b|').*)"
+    }
+  ]
+}
